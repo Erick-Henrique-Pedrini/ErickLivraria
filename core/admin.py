@@ -2,11 +2,14 @@
 Django admin customization.
 """
 
+from turtle import mode
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from core import models
+from core.models.categoria import Categoria
 
 
 class UserAdmin(BaseUserAdmin):
@@ -51,4 +54,6 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
+
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Categoria)
