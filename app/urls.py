@@ -9,11 +9,12 @@ from rest_framework.routers import DefaultRouter
 
 from core.views import UserViewSet
 from core.views import CategoriaViewSet
+from core.views import EditoraViewSet
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
-
+router.register(r'editoras', EditoraViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     # OpenAPI 3

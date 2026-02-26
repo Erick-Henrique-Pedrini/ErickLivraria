@@ -10,6 +10,7 @@ from django.utils.translation import gettext_lazy as _
 
 from core import models
 from core.models.categoria import Categoria
+from core.models.editora import Editora
 
 
 class UserAdmin(BaseUserAdmin):
@@ -57,3 +58,4 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Categoria)
+admin.site.register(models.Editora)
